@@ -1,0 +1,136 @@
+
+header, main, nav, footer, section, article, figure, figcaption, aside  { display: block; }
+
+* { box-sizing: border-box; }
+
+header  { background-image: url(Images/softballdirtfield.jpg);
+          background-size: cover; 
+          height: 12em; }
+
+header h1 { text-align: center;
+            font-family: Verdana, Arial, sans-serif; 
+            font-size: 4em;
+            color: #FFFFFF; 
+            height: auto;
+            margin: 0;
+            padding-bottom: 1em; }
+
+header a  { font-size: 1em;
+            color: #FFFFFF; }
+
+#wrapper  { background-color: lightgray; }
+
+body  { margin: 0; }
+
+nav { background-color: #FECD57;
+      height: 55px; }
+
+nav ul  { list-style-type: none;
+          text-align: center;
+          margin: 0;
+          padding-top: .75em; }
+
+nav li  { display: inline;
+          padding: 2.5em; 
+          font-family: Verdana, Arial, sans-serif;
+          font-size: 1.5em; }
+
+nav a { text-decoration: none;
+        color: black;
+        font-weight: bold; }
+
+#demo { display: flex;
+        flex-direction: row; }
+
+img { max-width: 40%; 
+      height: auto; }
+
+main  { flex: 4;
+        margin: 0; 
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: #FFFFFF }
+
+aside { flex: 1;
+        padding-left: 1em; 
+        background-color: #9E5720;
+        color: #FFFFFF; }
+
+table { margin: auto; 
+        border: 5px solid black;
+        width: 500px;        
+        border-collapse: collapse;
+        margin-bottom: 1em; }
+
+caption { font-family: Arial, sans-serif; 
+          font-weight: bold; 
+          font-size: 1.5em; 
+          padding-bottom: 0.5em; }
+
+td, th  { border: 1px solid black;
+          padding: 0.5em;
+          text-align: center;
+          font-family: Arial, sans-serif; }
+
+tr:nth-of-type(even) { background-color: lightgray; }
+
+#mobileul { display: none; }
+
+form  { background-color: lightgray;
+        font-family: Arial, sans-serif; 
+        padding: 1em; }
+
+label { float: left; 
+        width: 150px;
+        clear: left; 
+        text-align: left;
+        padding-right: 1em;}
+
+footer { background-color: #FECD57; 
+         text-align: center;
+         color: black}
+
+footer a { color: black; }
+
+@media only screen and (max-width: 1024px) {
+  body { margin: 0; padding: 0; }
+  #demo { display: flex; 
+          flex-direction: column; }
+  wrapper { width: auto; margin: 0; }
+  h1 { font-size: 100%; }
+  nav { background-color: #FECD57; }
+  header a  { display: none; }
+  nav ul  { display: flex; 
+            flex-direction: row ; 
+            justify-content: center; }
+  nav li  { padding: .50em;
+            margin-left: 1em; 
+            margin-right: 1em; 
+            font-size: 1em; }
+  image { width: 50%; }
+  main  { width: 50%; }
+  video { width: 50%; }
+  table { width: 50%; }
+  aside { width: 50%; }
+}
+
+@media only screen and (max-width: 768px) {
+  header h1 { font-size: 3em; }
+  header a  { display: none;  }
+  nav { order: 1;
+        height: auto;
+        background-color: #FECD57; }
+  nav ul  { display: flex; 
+            flex-direction: column; 
+            flex-wrap: wrap;
+            padding: 0; 
+            padding-bottom: 1em; }
+  img { display: none; }
+  main  { width: 100% }
+  h2    { text-align: center; }
+  p     { text-align: center; }
+  aside { display: none;  }
+  video { width: 100%; }
+  table { display: none; }
+  #mobileul { display: block; }
+}
